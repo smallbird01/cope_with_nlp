@@ -1,0 +1,13 @@
+from PyPDF2 import PdfFileReader as pdf_read
+with open(file_add, 'rb') as f:
+    pdf = pdf_read(f)
+    print("共有%d页" % pdf.numPages)
+    text_outline_list = pdf.getOutlines()
+    print(text_outline_list[18].page)
+    print(dir(text_outline_list[18].page))
+    print(text_outline_list[18].page.idnum)
+    print(text_outline_list[18].page.generation)
+    page_num_tmp = pdf.getDestinationPageNumber(text_outline_list[2])
+    print(pdf.getPage(page_num_tmp).extractText())
+    print(type(text_outline_list[1]))
+    print(text_outline_list[1])
