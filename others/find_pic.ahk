@@ -57,3 +57,14 @@ isPic(ImageFilePath, clickNum:=0, colorR:=10,  Width:=2556, Height:=1429, sysRes
     else {MsgBox, No pic on the way!
     }
 }
+
+; 模拟真实鼠标
+mouseCC(clickNum:=1){
+    ; Loop % 形式参数{} （通过%可以将形参转成数字）
+    Loop, % clickNum{
+        Click, down
+        Sleep, 100
+        Click, up
+        sleep, 100
+    } 
+}
