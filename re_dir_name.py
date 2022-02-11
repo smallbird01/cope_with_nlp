@@ -18,3 +18,6 @@ for i in fileList:
     os.rename(old_name, new_name)  # 用os模块中的rename方法对文件改名
     print(old_name, '======>', new_name)
     n = n + 1
+    
+# add a list for testing 
+toList = []
